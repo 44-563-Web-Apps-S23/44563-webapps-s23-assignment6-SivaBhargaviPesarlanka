@@ -37,7 +37,32 @@ function checkPainter (){
         document.getElementById("result").innerHTML=oops;
     }
 }
+
 </script>
+
+<div class="container"><img src="Img1.jpg" id="plant" height="100px" width="100px" onclick="selectImage()"></div>
+    <script>
+        var useImage = 1;
+        function selectImage() {
+            switch (useImage) {
+                case 1:
+                    document.getElementById("plant").src = "Img1.jpg"
+                    useImage = 2;
+                    break;
+                case 2:
+                    document.getElementById("plant").src = "Img2.jpg"
+                    useImage = 3;
+                    break;
+                case 3:
+                    document.getElementById("plant").src = "Img3.jpg"
+                    useImage = 1;
+                    break;
+            }
+
+        }
+    </script>
+
+</div>
 
 </body>
 </html> 
