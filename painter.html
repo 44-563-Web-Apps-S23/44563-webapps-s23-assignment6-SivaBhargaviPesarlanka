@@ -20,12 +20,13 @@
     <label for="guesspainter">Guess the painter</label>
     <input type ="text" id="guesspainter"> <br>
 
-    <input id = "mybutton"  class = "btn-success"type="button" onclick="checkPainter()" value = "check the guess">
+    <input id = "mybutton"  class = "btn btn-success"type="button" onclick="checkPainter()" value = "check the guess">
 </form>
 <p id="result">This text will be replaced </p>
 <script> 
 let good = 0;
 let oops = 0;
+let count = 0;
 
 function checkPainter (){
     
@@ -38,8 +39,8 @@ function checkPainter (){
         document.getElementById("result").innerHTML=good;
     } else {
         count++;
-        if(count> 0){
-            alert("Sorry, ran out of guesses");
+        if(count> 10){
+            noOfGusses();
         }
         else{
         oops +=1;
@@ -51,7 +52,7 @@ function checkPainter (){
 
 </script>
 
-<div class="container"><img src="Img1.jpg" id="plant" height="100px" width="100px" onclick="selectImage()"></div>
+<div class="container"><img src="Img1.jpg" id="plant" height="100" width="100" onclick="selectImage()"></div>
     <script>
         var useImage = 1;
         function selectImage() {
@@ -71,13 +72,11 @@ function checkPainter (){
             }
 
         }
-        function noOfGusses(countNoOfWrong){
-            let count = countNoOfWrong;
-            if(count > 10){
-                document.getElementById("mybutton").onclick = noOfGusses();
+        function noOfGusses(){
+            
                 alert("Sorry, ran out of guesses");
                 oops = 0;
-            }
+            
         }
     </script>
 
