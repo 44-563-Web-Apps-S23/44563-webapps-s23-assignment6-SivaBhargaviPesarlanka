@@ -15,13 +15,13 @@
 <div class="container">
     <form>
        
-        <input type="checkbox" id="DarkChocolate" name="candy" value="true">
+        <input type="checkbox" id="Dark_Chocolate" name="candy" value="true">
         <label for="DarkChocolate">Dark Chocolate</label> <br>
      
-        <input type="checkbox" id="Nuts" name="candy" value="true">
+        <input type="checkbox" id="Nuts_" name="candy" value="true">
         <label for="Nuts">Nuts</label> <br>
     
-        <input type="checkbox" id="Chewy" name="candy" value="false">
+        <input type="checkbox" id="Chewy_" name="candy" value="false">
         <label for="Chewy">Chewy</label> <br>
     
         <input type="button" class="btn btn-warning" value="Select a box" onclick="selectBox()">
@@ -44,56 +44,56 @@
 </div>
 </div>
 <script> 
-    let my_candy_box={};
+    let mycandybox={};
     function selectBox()
     {
         
-        let darkChocolate=document.getElementById("DarkChocolate").checked
-        let Nuts=document.getElementById("Nuts").checked
-        let Chewy=document.getElementById("Chewy").checked
+        let dark_Chocolate=document.getElementById("Dark_Chocolate").checked
+        let Nuts_=document.getElementById("Nuts_").checked
+        let Chewy_=document.getElementById("Chewy_").checked
     
-        if(darkChocolate)
+        if(dark_Chocolate)
         {
-            my_candy_box.DarkChocolate=true;
+            mycandybox.Dark_Chocolate=true;
         }
         else
         {
-            my_candy_box.DarkChocolate=false;
+            mycandybox.Dark_Chocolate=false;
         }
-        if(Nuts)
+        if(Nuts_)
         {
-            my_candy_box.Nuts=true;
-        }
-        else
-        {
-            my_candy_box.Nuts=false;
-        }
-        if(Chewy)
-        {
-            my_candy_box.Chewy=true;
+            mycandybox.Nuts_=true;
         }
         else
         {
-            my_candy_box.Chewy=false;
+            mycandybox.Nuts_=false;
+        }
+        if(Chewy_)
+        {
+            mycandybox.Chewy_=true;
+        }
+        else
+        {
+            mycandybox.Chewy_=false;
         }
         
     
-        document.getElementById("result").innerHTML=JSON.stringify(my_candy_box)
-        document.getElementById("DarkChocolate").checked = false;
-        document.getElementById("Nuts").checked = false;
-        document.getElementById("Chewy").checked = false;
+        document.getElementById("result").innerHTML=JSON.stringify(mycandybox)
+        document.getElementById("Dark_Chocolate").checked = false;
+        document.getElementById("Nuts_").checked = false;
+        document.getElementById("Chewy_").checked = false;
     
     }
     
     function updateBox()
     {
-        let my_candy_box = {};
+        let mycandybox = {};
         let size=document.getElementById("size").value;
         let price=document.getElementById("price").value;
-        my_candy_box["size"]=size;
-        my_candy_box["price"]=price;
+        mycandybox["size"]=size;
+        mycandybox["price"]=price;
     
-        document.getElementById("result").innerHTML=JSON.stringify(my_candy_box)
+        document.getElementById("result").innerHTML=JSON.stringify(mycandybox)
     }
     
     </script>
